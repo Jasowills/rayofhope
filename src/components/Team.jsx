@@ -3,20 +3,25 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "../styles/team.css";
 
+// Import images
+import NurudeenImage from 'src/assets/images/Nurudeen.png';
+import StephenImage from 'src/assets/images/stephen.png';
+import SeunImage from 'src/assets/images/seun.png';
+
 const members = [
   {
     name: "Nurudeen Hassana",
-    image: "src/assets/images/Nurudeen.png",
+    image: NurudeenImage,
     details: "Co-Founder, Ray of Hope Prison Outreach"
   },
   {
     name: "Ogunyinka Stephen Temitope",
-    image: "src/assets/images/stephen.png",
+    image: StephenImage,
     details: "Co-founder, Ray of Hope Prison Outreach."
   },
   {
     name: "Seunfunmi Awofodu-Johnson",
-    image: "src/assets/images/seun.png",
+    image: SeunImage,
     details: "Chairman, Ray of Hope Prison Outreach."
   }
 ];
