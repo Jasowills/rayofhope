@@ -6,17 +6,17 @@ import "../styles/team.css";
 const members = [
   {
     name: "Nurudeen Hassana",
-    image: "/src/assets/images/Nurudeen.png",
+    image: "src/assets/images/Nurudeen.png",
     details: "Co-Founder, Ray of Hope Prison Outreach"
   },
   {
     name: "Ogunyinka Stephen Temitope",
-    image: "/src/assets/images/stephen.png",
+    image: "src/assets/images/stephen.png",
     details: "Co-founder, Ray of Hope Prison Outreach."
   },
   {
     name: "Seunfunmi Awofodu-Johnson",
-    image: "/src/assets/images/seun.png",
+    image: "src/assets/images/seun.png",
     details: "Chairman, Ray of Hope Prison Outreach."
   }
 ];

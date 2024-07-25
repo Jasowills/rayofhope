@@ -26,7 +26,7 @@ const Hero = () => {
         <p>Dedicated to Legal Reform and Welfare support for  Prisoners in Nigeria.</p>
         <div className='button-container'>
           <button className='get-involved'>Get Involved</button>
-          <button className='donate-button'>Donate Now</button>
+       <a href="https://sandbox-flw-web-v3.herokuapp.com/donate/n6uibtheaiei"><button className='donate-button'>Donate Now</button></a>   
         </div>
       </div>
     </div>

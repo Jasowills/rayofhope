@@ -23,7 +23,7 @@ const MobileNavbar = () => {
           <a href="#about" onClick={toggleNav}>About Us</a>
           <a href="#campaigns" onClick={toggleNav}>Campaigns</a>
           <a href="#involved" onClick={toggleNav}>Get Involved</a>
-          <a href="#involved" className='donate' onClick={toggleNav}>Donate Now</a>
+          <a href="https://sandbox-flw-web-v3.herokuapp.com/donate/n6uibtheaiei" className='donate' onClick={toggleNav}>Donate Now</a>
         </nav>
       </header>
     </div>
