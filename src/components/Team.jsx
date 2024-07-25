@@ -4,9 +4,9 @@ import 'aos/dist/aos.css';
 import "../styles/team.css";
 
 // Import images
-import NurudeenImage from 'src/assets/images/Nurudeen.png';
-import StephenImage from 'src/assets/images/stephen.png';
-import SeunImage from 'src/assets/images/seun.png';
+import NurudeenImage from '/src/assets/images/Nurudeen.png';
+import StephenImage from '/src/assets/images/stephen.png';
+import SeunImage from '/src/assets/images/seun.png';
 
 const members = [
   {
