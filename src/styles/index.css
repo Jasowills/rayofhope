@@ -1,0 +1,32 @@
+/* Importing the font */
+@import url('./fonts.css');
+
+/* Global Styles */
+.body {
+    font-family: 'The Season', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+
+}
+
+/* Scrollbar Styles for WebKit Browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #000; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9A33CC; /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+    border: 3px solid #000; /* Padding around thumb */
+}
+
+/* Scrollbar Styles for Firefox */
+body {
+    scrollbar-color: #9A33CC #000; /* Thumb and track color */
+    scrollbar-width: thin; /* Scrollbar width */
+}

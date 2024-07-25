@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.hero {
+    height: 85vh;
+    background-image: url('/src/assets/images/Heroimg.jpg'); /* Replace with your hero image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    margin-top: 80px;
+    position: relative;
+  }
+  .text-container{
+    margin-top: 80px;
+    width: 50%;
+  }
+  .text-container h1{
+      font-size: 50px;
+      line-height: 25px;
+      padding: 8px;
+  }
+  .text-container p {
+    font-size: 20px;
+    font-family: "Outfit";
+    width: 70%;
+    display: flex;
+    margin: auto;
+  }
+  .button-container{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 51%;
+    margin: auto;
+  }
+  .get-involved{
+    background-color: transparent;
+    color: #fff;
+    width: 165px;
+    height: 45px;
+    font-family: "Outfit";
+    border: none;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+  @media  screen and (max-width: 800px) {
+    .hero{
+      margin-top: 0;
+      padding: 0;
+    }
+    .text-container{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      padding: 0;
+    }
+    .text-container h1{
+       font-size: 30px;
+       padding: 10px;
+       line-height: 35px;
+       letter-spacing: 2px;
+    }
+    .text-container p {
+      font-size: 15px;
+    }
+    .button-container{
+      width: 100%;
+      display: flex;
+      padding: 8px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+  }

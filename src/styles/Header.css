@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+body{
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+/* Header.css */
+.container {
+  background-color: #0E0E0E;
+}
+
+.flex {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.2rem;
+  background-color: #0E0E0E;
+  color: #fff;
+  font-family: "Outfit";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #9A33CC;
+}
+
+.donate-button {
+  background-color: #9A33CC;
+  color: #fff;
+  width: 165px;
+  height: 45px;
+  font-family: "Outfit";
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #9A33CC;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.nav a.active {
+  color: #9A33CC;
+  border-bottom: 2px solid #9A33CC; /* Adjust the color and thickness as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header{
+    border: 1px solid red;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly !important;
+    position: relative !important;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}

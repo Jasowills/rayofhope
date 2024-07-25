@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('./fonts.css');
+
+.highlight {
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #9A33CC;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.highlight-ex{
+  position: relative;
+  
+}
+.highlight-ex::after {
+  content: '';
+  display: block;
+  width: 150px;
+  height: 3px;
+  background-color: #9A33CC;
+  position: absolute;
+  bottom: -5px;
+  left: 0;}
+.campaigns {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  height: fit-content;
+  background-image: url("../assets/images/campaignsimg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.campaigns::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1;
+}
+
+.campaign-container {
+  text-align: left;
+  width: 40%;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.campaign-container h2 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.campaign-container p {
+  color: #fff;
+  font-size: 14px;
+  width: 75%;
+  font-family: "Outfit";
+}
+
+.purple {
+  background-color: #9A33CC;
+  border: none;
+}
+
+.campaign-cards {
+  width: 65%;
+  padding: 20px;
+  z-index: 2;
+  gap: 20px;
+  position: relative;
+}
+
+.card {
+  background: #fff;
+  border-radius: 4px;
+  width: 270px; /* Reduce the width */
+  margin: 10px;
+  border: 1px solid lightgrey;
+  font-family: "Outfit";
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between the elements */
+  height: 400px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #000;
+  padding: 0 15px;
+  margin: 8px 0; /* Add margin to separate from description */
+}
+
+.card p {
+  font-size: 12px;
+  color: #000;
+  padding: 0 15px;
+  flex-grow: 1; /* Allow description to grow and take up remaining space */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  display: -webkit-box; /* Required for webkit-based browsers */
+  -webkit-line-clamp: 4; /* Number of lines to show */
+  -webkit-box-orient: vertical; /* Required for webkit-based browsers */
+  height: 50%; /* Ensure consistent height */
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.width {
+  width: 90px;
+  border-radius: 25px;
+  height: 35px;
+  font-size: 13px;
+}
+
+.card-actions .read-more,
+.card-actions .donate {
+  text-decoration: none;
+  background-color: #800080;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.card-actions .read-more {
+  background-color: transparent;
+  color: #800080;
+  padding: 0;
+}
+
+.card-actions .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Make carousel-card a grid container */
+.carousel-card {
+  display: grid;
+  grid-template-rows: 1fr; /* Ensures all items are of equal height */
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center; /* Center the cards within the carousel */
+}
+
+
+/* Additional styles for slick carousel */
+.slick-prev, .slick-next {
+  color: #fff;
+  z-index: 2;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}
+.half-section{
+    height: fit-content;
+    padding: 10px;
+    background-color: #0E0E0E;
+    display: flex;
+    justify-content: space-between;
+}
+.sect{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+}
+.sect img{
+  width: 60px;
+}
+.sect p{
+  color: #fff;
+  font-size: 15px;
+  font-family: "Outfit";
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .campaigns{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .campaign-container {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    justify-content: center;
+  }
+  .campaign-cards{
+    width: 80%;
+    padding: 35px;
+  }
+  .card{
+    width: 280px;
+    height: 400px;
+  }
+  .campaign-container p {
+    width: 90%;
+  }
+  .card h3{
+    font-size: 13px;
+  }
+  .card p{
+    font-size: 11px;
+  }
+  .half-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+  }
+  .sect{
+    width: 90%;
+    margin: auto;
+  }
+  .sect p{
+    font-size: 13px;
+    padding: 10px;
+  }
+}

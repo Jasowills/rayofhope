@@ -1,0 +1,84 @@
+/* MobileNavbar.css */
+
+.mobile-navbar-container {
+    background-color: #0E0E0E;
+    padding: 10px;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    height: 20px;
+    width: 80%;
+    background-color: #0E0E0E;
+    color: #fff;
+    font-family: "Outfit";
+    /* align-items: center; */
+
+  }
+  .mobile-logo{
+  }
+  .mobile-logo img {
+    width: 120px;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0E0E0E;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    /* border: 1px solid red; */
+    z-index: 22;
+    left: 0;
+    /* padding: 10px; */
+  }
+  .donate{
+    color: #9A33CC !important;
+  }
+  .mobile-nav a{
+    /* border: 1px solid red; */
+  }
+  .mobile-nav.open {
+    display: flex;
+  }
+  
+  .mobile-nav a {
+    padding: 1rem 2rem;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  .logo-m{
+    width: 40px !important;
+  }
+  .mobile-nav a:hover {
+    color: #9A33CC;
+  }
+  
+  .mobile-nav a.active {
+    color: #9A33CC;
+    border-bottom: 2px solid #9A33CC; /* Adjust the color and thickness as needed */
+  }
+  
