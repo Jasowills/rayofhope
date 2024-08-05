@@ -4,6 +4,7 @@ import "../styles/campaigns.css";
 import campaignData from './campaignData'; // Adjust the path according to your project structure
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 
 const Carousel = () => {
     const settings = {
@@ -35,7 +36,7 @@ const Carousel = () => {
           <p>{item.description}</p>
           <div className="card-actions">
             <a href="#read-more" className="read-more">Read More</a>
-            <button className="donate-button width">Donate</button>
+         <Link to="/donate"><button className="donate-button width">Donate</button></Link>  
           </div>
         </div>
         </div>

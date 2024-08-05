@@ -26,7 +26,7 @@
   .mobile-logo{
   }
   .mobile-logo img {
-    width: 120px;
+    width: 80px;
     cursor: pointer;
   }
   
@@ -70,9 +70,7 @@
     font-size: 1rem;
     transition: color 0.3s ease;
   }
-  .logo-m{
-    width: 40px !important;
-  }
+
   .mobile-nav a:hover {
     color: #9A33CC;
   }

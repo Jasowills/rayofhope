@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
+import { motion } from 'framer-motion';
 import "../styles/team.css";
 
 // Import images
@@ -27,27 +26,6 @@ const members = [
 ];
 
 const Team = () => {
-  useEffect(() => {
-    const initAOS = () => {
-      if (window.innerWidth >= 768) {
-        AOS.init({
-          duration: 1000,
-        });
-      } else {
-        AOS.init({
-          disable: true, // Disable AOS on mobile
-        });
-      }
-    };
-
-    initAOS();
-    window.addEventListener('resize', initAOS);
-
-    return () => {
-      window.removeEventListener('resize', initAOS);
-    };
-  }, []);
-
   return (
     <section className='team' id='team'>
       <div className="head">
@@ -55,19 +33,31 @@ const Team = () => {
       </div>
       <div className="team-container">
         {members.map((member, index) => (
-          <div className="members" key={index} data-aos="fade-up">
-            <div className="img">
-              <img src={member.image} alt={member.name} />
-            </div>
-            <div className="details">
-              <h3>{member.name}</h3>
-              <p>{member.details}</p>
-            </div>
-          </div>
+          <MemberCard key={index} member={member} />
         ))}
       </div>
     </section>
   );
-}
+};
+
+const MemberCard = ({ member }) => {
+  return (
+    <motion.div
+      className="members"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="img">
+        <img src={member.image} alt={member.name} />
+      </div>
+      <div className="details">
+        <h3>{member.name}</h3>
+        <p>{member.details}</p>
+      </div>
+    </motion.div>
+  );
+};
 
 export default Team;

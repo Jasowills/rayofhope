@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.values{
+    height: fit-content;
+    padding: 20px;
+    background-color: #0E0E0E;
+}
+.head-text{
+    color: #fff;
+    padding: 25px;
+}
+.value-list{
+    padding: 20px;
+    width: 90%;
+}
+.frame{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.frame-text{
+    color: #fff;
+    justify-content: center;
+    font-family: "Outfit";
+}
+.frame-text h3{
+    font-style: bold;
+}
+.frame-text {
+    font-weight: 300;
+}
+hr{
+    border: 0.5px solid gray;
+    width: 98%;
+}
+.your-role{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.your-role h1{
+}
+.your-role ul li{
+    padding: 10px;
+    font-size: 17px;
+    font-family: "Outfit";
+}
+.your-role ul li span {
+    font-weight: 600;
+}
+@media screen and (max-width: 500px) {
+    .your-role{
+        padding: 10px;
+    }
+    .your-role ul li{
+        padding: 10px;
+        font-size: 15px;
+    }
+    .your-role h1{
+        font-size: 25px;
+    }
+    .frame{
+        width: 100%;
+    }
+    .value-list{
+        width: 100%;
+        padding: 0;
+    }
+    .values{
+        padding: 15px;
+    }
+    .head-text{
+        padding: 10px;
+    }
+    .head-text h1{
+        font-size: 25px;
+    }
+}

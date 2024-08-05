@@ -23,15 +23,13 @@ const Footer = () => {
             <ul>
               <li><a href='/about'>About Us</a></li>
               <li><a href='/campaigns'>Campaigns</a></li>
-              <li><a href='/involved'>Get Involved</a></li>
-              <li><a href='/contact'>Contact us</a></li>
             </ul>
           </div>
           <div className='footer-column'>
             <h4>Support Us</h4>
             <ul>
               <li><a href='/donate'>Donate now</a></li>
-              <li><a href='/volunteer'>Volunteer</a></li>
+              <li><a href='/involved'>Get Involved</a></li>
             </ul>
           </div>
           <div className='footer-column'>

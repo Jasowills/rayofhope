@@ -1,80 +1,62 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css';
 import logo from "../assets/images/rayofhope.png";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('home');
+  const location = useLocation(); // Get the current location
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
-  const handleNavLinkClick = (link) => {
-    setActiveLink(link);
+  const handleNavLinkClick = () => {
     setIsNavOpen(false); // Close the nav menu when a link is clicked
   };
 
-  const handleScroll = () => {
-    const sections = document.querySelectorAll('section');
-    let currentSection = 'home';
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      if (window.scrollY >= sectionTop - 50 && window.scrollY < sectionTop + sectionHeight - 50) {
-        currentSection = section.getAttribute('id');
-      }
-    });
-
-    setActiveLink(currentSection);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  // Helper function to determine if a link is active
+  const isActive = (path) => location.pathname === path ? 'active' : '';
 
   return (
     <div className='container'>
       <header className="header">
         <div className="logo">
-          <a href="/"><img src={logo} className='logo' alt="Ray of Hope" /></a>
+          <Link to="/">
+            <img src={logo} className='logo' alt="Ray of Hope" />
+          </Link>
         </div>
         <div className='flex'>
           <nav className={`nav ${isNavOpen ? 'open' : ''}`}>
-            <a
-              href="#home"
-              className={activeLink === 'home' ? 'active' : ''}
-              onClick={() => handleNavLinkClick('home')}
+            <Link
+              to="/"
+              className={isActive("/")}
+              onClick={handleNavLinkClick}
             >
               Home
-            </a>
-            <a
-              href="#about"
-              className={activeLink === 'about' ? 'active' : ''}
-              onClick={() => handleNavLinkClick('about')}
+            </Link>
+            <Link
+              to="/about"
+              className={isActive("/about")}
+              onClick={handleNavLinkClick}
             >
               About Us
-            </a>
-            <a
-              href="#campaigns"
-              className={activeLink === 'campaigns' ? 'active' : ''}
-              onClick={() => handleNavLinkClick('campaigns')}
-            >
-              Campaigns
-            </a>
-            <a
-              href="#involved"
-              className={activeLink === 'involved' ? 'active' : ''}
-              onClick={() => handleNavLinkClick('involved')}
+            </Link>
+            <Link
+              to="/get-involved"
+              className={isActive("/get-involved")}
+              onClick={handleNavLinkClick}
             >
               Get Involved
-            </a>
+            </Link>
           </nav>
-    <a href="https://sandbox-flw-web-v3.herokuapp.com/donate/n6uibtheaiei"><button className="donate-button bounce">Donate Now</button></a>     
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <Link
+              to="/donate"
+              onClick={handleNavLinkClick}
+            >  <button className="donate-button bounce">Donate Now</button></Link> 
         </div>
         <div className="menu-icon" onClick={toggleNav}>
           {isNavOpen ? '✕' : '☰'}

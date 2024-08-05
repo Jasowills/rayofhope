@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/MobileNavbar.css';
-import logo from "../assets/images/mobilelogo.jpg";
+import logo from "../assets/images/rayofhope.png";
 
 const MobileNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -13,17 +14,16 @@ const MobileNavbar = () => {
     <div className='mobile-navbar-container'>
       <header className="mobile-header">
         <div className="mobile-logo">
-          <a href="/"><img src={logo} className='logo-m' alt="Ray of Hope" /></a>
+          <Link to="/"><img src={logo} className='logo-m' alt="Ray of Hope" /></Link>
         </div>
         <div className="mobile-menu-icon" onClick={toggleNav}>
           {isNavOpen ? '✕' : '☰'}
         </div>
         <nav className={`mobile-nav ${isNavOpen ? 'open' : ''}`}>
-          <a href="#home" onClick={toggleNav}>Home</a>
-          <a href="#about" onClick={toggleNav}>About Us</a>
-          <a href="#campaigns" onClick={toggleNav}>Campaigns</a>
-          <a href="#involved" onClick={toggleNav}>Get Involved</a>
-          <a href="https://sandbox-flw-web-v3.herokuapp.com/donate/n6uibtheaiei" className='donate' onClick={toggleNav}>Donate Now</a>
+          <Link to="/" onClick={toggleNav}>Home</Link>
+          <Link to="/about" onClick={toggleNav}>About Us</Link>
+          <Link to="/get-involved" onClick={toggleNav}>Get Involved</Link>
+          <Link to="/donate" className='donate' onClick={toggleNav}>Donate Now</Link>
         </nav>
       </header>
     </div>

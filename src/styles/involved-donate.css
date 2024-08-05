@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.involved, .donate-hero{
+    height: 60vh;
+    margin-top: 84px;
+    background-image: url('../assets/images/get-involved-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.donate-hero {
+    background-image: url('../assets//images/donatebg.jpg') !important;
+    height: 60vh;
+}
+.involved-text{
+    padding: 50px;    
+}
+
+  
+.involved-text h1{
+    color: #fff;
+    line-height: 10px;
+    font-size: 60px;
+}
+.involved-text p{
+    color: #fff;
+    font-family: "Outfit";
+    width: 70%;
+}
+.involved-sect{
+    font-family: "Outfit";
+}
+
+  
+  .involved-sect article {
+    display: flex;
+    margin: auto;
+    padding: 30px;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    gap: 20px;
+    color: #1B1B1B;
+    font-weight: 500;
+  }
+  .involved-sect article p {
+    width: 60%;
+    margin: auto;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 1200px) {
+    .involved, .donate-hero{
+      margin-top: 0px;
+      height: fit-content;
+    }
+    .involved{
+      padding: 10px;
+    }
+    .involved-text h1 {
+      line-height: 1.1;
+      font-size: 50px;
+    }
+    .involved-text p {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .involved-text h1 {
+      font-size: 40px;
+    }
+    .involved-text p {
+      width: 90%;
+    }
+    .involved-text {
+      padding: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .involved-text h1 {
+      font-size: 35px;
+    }
+    .involved-text p {
+      width: 100%;
+    }
+    .involved-text {
+      width: 70%;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .involved-text h1 {
+      font-size: 30px;
+    }
+    .involved-text p {
+      font-size: 14px;
+      width: 90%;
+    }
+    .involved-text {
+      width: 100%;
+      padding: 20px;
+      margin-top: 10px;
+    }
+    .involved-sect article {
+      padding: 10px;
+    }
+    .involved-sect{
+      padding: 5px;
+    }
+    .involved-sect article p{
+          width: 100%;
+    }
+    .donate-hero{
+      padding: 10px;
+    }
+  }
+  

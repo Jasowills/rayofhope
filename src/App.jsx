@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 import MobileNavbar from './components/MobileNavbar';
-import "../src/styles/index.css";
-import Hero from './components/Hero';
-import MissionSection from './components/MissionSection';
+import About from '../pages/About';
 import Campaigns from './components/Campaigns';
-import HalfSection from './components/HalfSection';
 import Team from './components/Team';
+import Home from '../pages/Home';
+import './styles/index.css';
 import Footer from './components/Footer';
-import "../src/styles/index.css"
+import Getinvolved from '../pages/Getinvolved';
+import Donatenow from '../pages/Donatenow';
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -25,15 +26,21 @@ const App = () => {
   }, []);
 
   return (
-    <div className='body'>
-      {isMobile ? <MobileNavbar /> : <Navbar />}
-      <Hero />
-      <MissionSection />
-      <Campaigns />
-      <HalfSection />
-      <Team />
-      <Footer />
-    </div>
+    <Router>
+      <div className='body'>
+        {isMobile ? <MobileNavbar /> : <Header />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/campaigns" element={<Campaigns />} />
+          <Route path="/team" element={<Team />} />
+          <Route path='/get-involved' element={<Getinvolved/>} />
+          <Route path='/donate' element={<Donatenow/>} />
+
+        </Routes>
+      </div>
+      <Footer/>
+    </Router>
   );
 };
 

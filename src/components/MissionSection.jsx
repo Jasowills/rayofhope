@@ -28,7 +28,7 @@ const MissionSection = () => {
   }, []);
 
   return (
-    <section className='section' id='about'>
+    <section className='section' id=''>
       <div className='image-side'>
         <img src={image} alt="Group" />
       </div>

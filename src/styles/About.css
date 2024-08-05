@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.about {
+    height: 60vh;
+    margin-top: 84px;
+    background-image: url('/src/assets/images/aboutimg.jpg'); /* Replace with your hero image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  .about-text {
+    height: fit-content;
+    padding: 50px;
+  }
+  
+  .about-text h1 {
+    color: #fff;
+    line-height: 0;
+    font-size: 60px;
+  }
+  
+  .about-text p {
+    color: #fff;
+    font-family: "Outfit", sans-serif;
+    width: 70%;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 1200px) {
+    .about-text h1 {
+      font-size: 50px;
+    }
+    .about-text p {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .about-text h1 {
+      font-size: 40px;
+    }
+    .about-text p {
+      width: 90%;
+    }
+    .about-text {
+      padding: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about {
+      height: auto;
+      padding: 20px;
+      /* margin-top: 20px; */
+    }
+    .about-text h1 {
+      font-size: 35px;
+    }
+    .about-text p {
+      width: 100%;
+    }
+    .about-text {
+      width: 90%;
+      padding: 30px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about {
+      height: auto;
+      padding: 10px;
+      margin-top: 0px;
+    }
+    .about-text h1 {
+      font-size: 30px;
+    }
+    .about-text p {
+      font-size: 14px;
+    }
+    .about-text {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  

@@ -30,13 +30,16 @@
   left: 0;}
 .campaigns {
   position: relative;
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
+  width: 100%;
   height: fit-content;
   background-image: url("../assets/images/campaignsimg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .campaigns::before {
@@ -52,13 +55,10 @@
 
 .campaign-container {
   text-align: left;
-  width: 40%;
+  width: 25%;
   z-index: 2;
   position: relative;
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  justify-content: center;
+  padding: 10px;
 }
 
 .campaign-container h2 {
@@ -69,27 +69,27 @@
 .campaign-container p {
   color: #fff;
   font-size: 14px;
-  width: 75%;
+  width: 85%;
   font-family: "Outfit";
 }
 
 .purple {
-  background-color: #9A33CC;
-  border: none;
+  background-color: #9A33CC !important;
+  border: none !important;
+
 }
 
 .campaign-cards {
   width: 65%;
   padding: 20px;
   z-index: 2;
-  gap: 20px;
-  position: relative;
+  /* position: relative; */
 }
 
 .card {
   background: #fff;
   border-radius: 4px;
-  width: 270px; /* Reduce the width */
+  width: 280px; /* Reduce the width */
   margin: 10px;
   border: 1px solid lightgrey;
   font-family: "Outfit";
@@ -97,7 +97,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribute space between the elements */
+  justify-content: space-evenly; /* Distribute space between the elements */
   height: 400px;
 }
 
@@ -214,9 +214,12 @@
   .campaign-container {
     width: 100%;
     text-align: left;
-    padding: 10px;
+    display: block;
+    padding-left: 20px;
+    margin: auto;
     justify-content: center;
   }
+ 
   .campaign-cards{
     width: 80%;
     padding: 35px;

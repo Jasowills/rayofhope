@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.vision {
+    height: fit-content;
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .highlight-lg {
+    position: relative;
+    text-align: center; /* Ensure it's centered on smaller screens */
+    margin-bottom: 20px; /* Add some spacing below */
+  }
+  
+  .highlight-lg::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 3px;
+    background-color: #9A33CC;
+    position: absolute;
+    bottom: -5px;
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Center the line */
+  }
+  
+  .vision p {
+    width: 80%;
+    text-align: center;
+    font-family: "Outfit", sans-serif !important;
+    margin: 0 auto; /* Ensure it's centered */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 1200px) {
+    .highlight-lg::after {
+      width: 200px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .vision p {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .vision {
+      padding: 20px;
+    }
+    .highlight-lg::after {
+      width: 250px;
+    }
+    .vision p {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .vision {
+      padding: 20px;
+    }
+    .highlight-lg::after {
+      width: 200px;
+    }
+    .vision h1{
+        font-size: 25px;
+    }
+    .vision p {
+      width: 95%;
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  
